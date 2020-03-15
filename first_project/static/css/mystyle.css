@@ -1,0 +1,12 @@
+.bal {
+    color: rgb(78, 165, 37);
+    font-size: 2em;
+    text-decoration: underline;
+    text-align: center;
+    height: 200px;
+    background-color: aqua;
+}
+
+p {
+    color: blue;
+}
