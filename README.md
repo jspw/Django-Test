@@ -13,3 +13,5 @@
 #### Create application (you can create as many applications under a project)
   
 - `python manage.py startapp app_name`
+
+ **start project** : `python manage.py runserver`
