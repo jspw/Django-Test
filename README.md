@@ -15,3 +15,14 @@
 - `python manage.py startapp app_name`
 
  **start project** : `python manage.py runserver`
+
+
+ ## Database :
+### Models :
+- `python manage.py migrate`
+- `python manage.py makemigration app_name`
+- `python manage.py migrate`
+
+### create superuser :
+- `python manage.py createsuperuser`
+

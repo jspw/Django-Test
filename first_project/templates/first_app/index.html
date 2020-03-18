@@ -1,18 +1,61 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
+
   <head>
+
     <title>First App</title>
+
     <link rel="stylesheet" href="{% static "css/mystyle.css" %}" >
+
   </head>
+
   <body>
+
     <h1>This is a first application in django!</h1>
+
     <img src="{% static "images/shft.jpg" %}" alt="image" >
+
     <br />
-    {{ bal }}
+
+    {{ bal }}   <!--   code  -->
+
     <div class="bal">
-        this is a paragraph
-        <p>Fuck you bitch</p>
+      this is a paragraph
+      <p>Fuck you bitch</p>
+    </div>
+
+
+    <h2>Here are your access records</h2>
+
+    <div class="django2">
+
+      {% if access_records %}   <!--   if statment start  -->
+
+      <table border="2px">
+
+        <thead>
+          <th>Site Name</th>
+          <th>Data Accessed</th>
+        </thead>
+
+        {% for acc in access_records %}   <!--   for loop  -->
+
+        <tr>
+          <td>{{ acc.name }}</td>    <!--   code  -->
+          <td>{{ acc.date }}</td>   <!--   code  -->
+        </tr>
+
+        {% endfor %}   <!--   for loop finish  -->
+
+      </table>
+
+      {% else  %}   <!--   else condition  -->
+
+      <p>No Access Records Found!</p>
+
+      {% endif %}   <!--   if condition finish -->
+
     </div>
   </body>
 </html>
