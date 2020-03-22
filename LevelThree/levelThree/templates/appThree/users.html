@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>User Information</title>
+  </head>
+  <body>
+    <h1>You can find all the Information about the Users</h1>
+
+    {% if user %}
+
+    <ol class="list-group">
+      {% for info in user %}
+
+      <li>User Info : </li>
+
+        <ul class="list">
+            <li class="list-group-item">Name : {{info.name}}</li>
+            <li class="list-group-item">Email : {{info.email}}</li>
+            <li class="list-group-item">Address : {{info.country}}</li>
+        </ul>
+
+      {% endfor %}
+    </ol>
+
+    {% else %}
+
+    <h1>No Information Found</h1>
+
+    {% endif %}
+  </body>
+</html>

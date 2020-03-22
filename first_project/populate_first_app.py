@@ -8,8 +8,8 @@ django.setup()
 
 #fake popilation script
 import random
-from first_app.models import Topic,AccessRecord,Webpage
 from faker import Faker 
+from first_app.models import Topic,AccessRecord,Webpage
 
 fakegen = Faker()
 topics = ['Search','Social','Marketplace','News','Games']
@@ -21,7 +21,7 @@ def add_topic():
 
     return t
 
-def populate(N=5):
+def populate(N):
     for entry in range(N):
 
         #get the topic for entry

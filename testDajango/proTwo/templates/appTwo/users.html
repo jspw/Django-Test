@@ -1,12 +1,40 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
-    <head>
-        <title>Django!</title>
-    </head>
+  <head>
+    <title>Django!</title>
+    <!-- <link rel="stylesheet" href="{% static "css/" %}" > -->
+  </head>
 
-    <body>
-        <h1></h1>
+  <body>
+    <h1>User Information</h1>
+ 
+    {% if users %}
 
-        Click here to view user info <a href="" >Click</a>
-    </body>
+    <ol>
+
+        {% for info in users %}
+
+        <li>User Info</li>
+
+            <ul>
+
+                <li>First name : {{ info.first_name }}</li>
+                <li>Last name : {{ info.last_name }}</li>
+                <li>Email : {{ info.email }}</li>
+
+            </ul>
+
+        {% endfor %}
+
+    </ol>
+
+   
+    
+    {% else %}
+
+    <h3>No User records found!</h3>
+
+    {% endif %}
+  </body>
 </html>
