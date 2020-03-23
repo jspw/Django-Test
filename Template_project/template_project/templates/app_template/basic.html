@@ -15,17 +15,32 @@
 </head>
 <body>
 
+    
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+
+                <ul class="nav navbar-nav">
+                    <li><a class="navbar-brand" href="{% url 'template_app:index' %}">Brand</a></li>
+
+                    <li> <a class="navbar-link" href="{% url 'admin:index' %}">Admin</a> </li>
+
+                    <li> <a class="navbar-link" href="{% url 'template_app:other' %}">Other</a> </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+    
+
     <div class="container">
-        <div class="jumbotron">
-            <h3>Welcome to django!</h3>
-            
-            <h2>Here are the links below :</h2>
-            <a href="{% url 'template_app:index' %}" >Index</a> <!-- make sure no space between in the cotation mark '' ,only the name of the app and name of the page -->
-            <a href="{% url 'template_app:basic' %}">Basic</a><br>
-            <a href="{% url 'template_app:other' %}">Other</a><br>
-            <a href="{% url 'template_app:signup' %}">Signup</a><br>
-            <a href="{% url 'template_app:relative_template' %}">Relative_template</a><br>
-        </div>
+
+        {% block body_block %}
+
+        <!-- inherit templates here  -->
+
+        {% endblock %}
+
     </div>
     
 </body>

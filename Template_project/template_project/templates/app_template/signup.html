@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load crispy_forms_tags %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +18,8 @@
 
     <div class="well">
         <form method="POST" class="form-group">
-            {{form.as_p}}
+            <!-- {{form.as_p}}  -->
+            {{form|crispy}}
             {% csrf_token %}
 
             <input class="btn btn-primary" type="submit" value="submit" >

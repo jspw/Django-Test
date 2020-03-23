@@ -6,7 +6,8 @@ from django import forms
 # Create your views here.
 
 def index(request):
-    return render(request,'app_template/index.html')
+    contest_dict = {'text':"Hello world!"}
+    return render(request,'app_template/index.html',contest_dict)
 
 def basic(request):
     return render(request,'app_template/basic.html')

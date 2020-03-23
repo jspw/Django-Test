@@ -1,34 +1,16 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>HOME</title>
-</head>
-<body>
+{% include "app_template/basic.html" %}
 
-    <div class="container">
-        <div class="jumbotron">
-            <h3>Welcome to django!</h3>
-            
-            <h2>Here are the links below :</h2>
-            <a href="{% url 'template_app:index' %}" >Index</a>
-            <a href="{% url 'template_app:basic' %}">Basic</a><br>
-            <a href="{% url 'template_app:other' %}">Other</a><br>
-            <a href="{% url 'template_app:signup' %}">Signup</a><br>
-            <a href="{% url 'template_app:relative_template' %}">Relative_template</a><br>
+{%  block body_block %}
 
-            <a href="{% url 'admin:index' %}" >Admin page</a>
-        </div>
+    <div class="jumbotron">
+        <h1>Welcome to Index</h1>
+        <h2>This is a index.html page showing !</h2>
+
+        <h1>{{ text|cut:'world' }}</h1>
     </div>
+
     
-</body>
-</html>
+
+    {% endblock %}
