@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>HOME</title>
+</head>
+<body>
+
+    
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+
+                <ul class="nav navbar-nav">
+                    <li><a class="navbar-brand" href="{% url 'template_app:index' %}">Brand</a></li>
+
+                    <li> <a class="navbar-link" href="{% url 'admin:index' %}">Admin</a> </li>
+
+                    <li> <a class="navbar-link" href="{% url 'template_app:other' %}">Other</a> </li>
+
+                    {% if user.is_authenticated %}
+
+                        <li><a class="navbar-link" href="{% url 'logout' %}">LogOut</a></li>
+
+
+                    {% else %}
+
+                        <li><a class="navbar-link" href="{% url 'template_app:user_login' %}">LogIn</a></li>
+
+                        <li><a class="navbar-link" href="{% url 'template_app:signup' %}" >Signup here</a></li>
+
+
+                    {% endif %}
+
+
+
+                </ul>
+
+            </div>
+
+        </nav>
+    
+
+    <div class="container">
+
+        {% block body_block %}
+
+        <!-- inherit templates here  -->
+
+        {% endblock %}
+
+    </div>
+    
+</body>
+</html>

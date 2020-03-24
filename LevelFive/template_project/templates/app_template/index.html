@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+{% include "app_template/basic.html" %}
+
+{% block body_block %}
+
+    <div class="container">
+        <h1>Welcome to Index</h1>
+        <h2>This is a index.html page showing !</h2>
+
+        <h1>{{ text|cut:'world' }}</h1>
+
+        
+    </div>
+
+{% endblock %}

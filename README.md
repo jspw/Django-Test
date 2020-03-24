@@ -7,6 +7,13 @@
 - `conda create --name env_name django`
 - `conda activate env_name`
 
+## About Virtual Environment :
+- Check virtual environment list : `conda info --envs`
+- Viewing a list of the packages in an environment : `conda list -n envirnment_name` 
+  **or**
+  - Activate the envirment : `conda activate env_name`
+  - `pip list`
+
 ### Create new project 
 - `django-admin startproject project_name`
 
@@ -40,6 +47,8 @@
 - install Django Argon : `pip
  install argon2-cffi`
 
+## Inorder to work with images 
+- install python imaging library : `pip install pillow`
 
  ### Important Documentations :
 - [Getting Started](https://docs.djangoproject.com/en/3.0/)
@@ -57,3 +66,15 @@
 - [How to Use Bootstrap 4 Forms With Django](https://simpleisbetterthancomplex.com/tutorial/2018/08/13/how-to-use-bootstrap-4-forms-with-django.html)
 - [form.as_p](https://teamtreehouse.com/community/what-is-advantage-of-formasp)
 - [Password Authentication](https://docs.djangoproject.com/en/3.0/topics/auth/passwords/)
+
+
+
+### Django other versions vs Django 3 conflicts :
+
+- `from django.conf.urls import url` vs `from django.urls import path` : **url** and **path** are not same !
+- Django 2.0 removes the `django.core.urlresolvers` module, which was moved to `django.urls` in version 1.10. You should change any import to use `django.urls` instead, like this:
+  
+        from django.urls import reverse
+
+
+- 
