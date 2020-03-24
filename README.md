@@ -2,6 +2,9 @@
 **I am learing from there** : 
 [Python and Django Full Stack Web Developer Bootcamp](https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp/)
 
+
+My learing app is hosted here : [Practise App](http://jspw.pythonanywhere.com/) in [Pythonanywhere](pythonanywhere.com)
+
 ## Creating a virtual setup for Django
 - [install conda (miniconda or anaconda)](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html)
 - `conda create --name env_name django`
@@ -29,7 +32,7 @@
  ## Database :
 ### Models :
 - `python manage.py migrate`
-- `python manage.py makemigration app_name`
+- `python manage.py makemigrations app_name`
 - `python manage.py migrate`
 
 ### create superuser :
@@ -44,8 +47,7 @@
 
 ## Password Authentication 
 - install Bcrypt : `pip install bcrypt`
-- install Django Argon : `pip
- install argon2-cffi`
+- install Django Argon : `pip install argon2-cffi`
 
 ## Inorder to work with images 
 - install python imaging library : `pip install pillow`
