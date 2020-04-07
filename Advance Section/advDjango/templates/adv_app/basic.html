@@ -16,29 +16,17 @@
 <body>
 
     
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-inverse">
             <div class="container-fluid">
 
                 <ul class="nav navbar-nav">
-                    <li><a class="navbar-brand" href="{% url 'template_app:index' %}">Brand</a></li>
+                    <li><a class="navbar-brand" href="">Brand</a></li>
 
                     <li> <a class="navbar-link" href="{% url 'admin:index' %}">Admin</a> </li>
 
-                    <li> <a class="navbar-link" href="{% url 'template_app:other' %}">Other</a> </li>
 
-                    {% if user.is_authenticated %}
+                    <li> <a class="navbar-link" href="{% url 'adv_app:list' %}">School</a> </li>
 
-                        <li><a class="navbar-link" href="{% url 'logout' %}">LogOut</a></li>
-
-
-                    {% else %}
-
-                        <li><a class="navbar-link" href="{% url 'template_app:user_login' %}">LogIn</a></li>
-
-                        <li><a class="navbar-link" href="{% url 'template_app:signup' %}" >Signup here</a></li>
-
-
-                    {% endif %}
 
 
 
