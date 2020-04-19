@@ -79,4 +79,5 @@ My learing app is hosted here : [Practise App](http://jspw.pythonanywhere.com/) 
         from django.urls import reverse
 
 
-- 
+- In `OneToOneField()` and `Foreignkey()`  : `on_delete=models.CASCADE` field is required!
+- use `from django.contrib.auth.views import LoginView`  insted of `from django.contrib.auth import views` and use `LoginView.as_view()` in the urlpattern insted of 'views.login'

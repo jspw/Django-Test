@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <h1>Here is the database of books</h1>
+    {% for book in book %}
+    <ul>
+      <h3>Book id : {{book.id}}</h3>
+      <li>Name : {{book.Title}}</li>
+      <li>Status : {{book.Status}}</li>
+      <li>Price : {{book.Price}}</li>
+      <li>Description : {{book.Description}}</li>
+      <li>Published : {{book.Published}}</li>
+    </ul>
+    {%endfor%}
+  </body>
+</html>
