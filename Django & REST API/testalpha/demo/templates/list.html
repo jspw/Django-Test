@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="container">
+            <!-- student list -->
+            <h1 >
+                Here is a list of students.
+            </h1>
+   
+            <ol class="jumbotron"> 
+                {% for student in info.students %}
+                    <li><a href="{% url 'detail' pk=student.pk %}">{{student.name}}</a></li><br>
+                {% endfor %}
+            </ol>
+            <!-- teacher list -->
+            <h1 >
+                Here is a list of Teachers.
+            </h1>
+   
+            <ol class="jumbotron"> 
+                {% for teacher in info.teachers %}
+                    <li><a href="{% url 'detail' pk=teacher.pk %}">{{teacher.name}}</a></li><br>
+                {% endfor %}
+            </ol>
+
+            <!-- varsity list -->
+
+            <h1 >
+                Here is a list of varsity.
+            </h1>
+   
+            <ol class="jumbotron"> 
+                {% for varsity in info.varsity %}
+                    <li><a href="{% url 'detail' pk=varsity.pk %}">{{varsity.name}}</a></li><br>
+                {% endfor %}
+            </ol>
+
+
+            <!-- departmnet list -->
+
+            <h1 >
+                Here is a list of department.
+            </h1>
+   
+            <ol class="jumbotron"> 
+                {% for department in info.department %}
+                    <li><a href="{% url 'detail' pk=department.pk %}">{{department.name}}</a></li><br>
+                {% endfor %}
+            </ol>
+
+        </div>
+
+{% endblock %}

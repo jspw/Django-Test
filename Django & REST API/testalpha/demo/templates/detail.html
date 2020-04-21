@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+    <h1 style="text-align: center;">More Detail about {{student.name}}</h1>
+ <table class="table">
+     <tr>
+         <th>Name</th>
+         <th>Reg. No</th>
+         <th>Department</th>
+         <th>Varsity</th>
+         <th>Birth</th>
+         <th>Comment</th>
+
+     </tr>
+
+     <tr>
+         <td>{{student.name}}</td>
+         <td>{{student.reg_no}}</td>
+         <td>{{student.dept}}</td>
+         <td>{{student.varsity}}</td>
+         <td>{{student.birth}}</td>
+         <td>{{student.comment}}</td>
+     </tr>
+ </table>
+
+    <h2>About the Department</h2>
+
+</div>
+
+{% endblock %}
