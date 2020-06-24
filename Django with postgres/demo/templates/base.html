@@ -1,0 +1,43 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+  <script src="{% static 'js/bootstrap.min.js' %}" ></script>
+  <title>{{title}}</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-basic">
+
+    <div class="container">
+
+      <ul class="nav navbar-nav">
+        <!-- <li class="navbar-header">YOOO</li> -->
+        <!-- <li class="navbar-text">YOOO</li> -->
+        <li><a href="#" class="navbar-brand">Codenerd</a></li>
+        <li><a href="#" class="navbar-link">Technology</a></li>
+        <li><a href="#" class="navbar-link">Languages</a></li>
+        <li><a href="#" class="navbar-link">Courses</a></li>
+
+      </ul>
+      <ul class=" nav navabr-nav">
+      <li><a href="#" class="navbar-link " style="float:right;">Welcome, Shifat</a></li>
+
+    </div>
+
+  </nav>
+
+  <div class="container-fluid">
+
+    {% block content %}
+
+
+    {% endblock %}
+
+  </div>
+  
+</body>
+</html>

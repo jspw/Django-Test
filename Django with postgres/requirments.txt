@@ -1,0 +1,9 @@
+django
+pillow
+django-crispy-forms
+bcrypt
+argon2-cffi
+markdown
+filters
+djnagorestframework
+psycopg2

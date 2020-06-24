@@ -10,6 +10,9 @@
     {% for book in book %}
     <ul>
       <h3>Book id : {{book.id}}</h3>
+      {% for author in author.books %}
+        <b>{{author}}</b>
+      {% endfor %}
       <li>Name : {{book.Title}}</li>
       <li>Status : {{book.Status}}</li>
       <li>Price : {{book.Price}}</li>

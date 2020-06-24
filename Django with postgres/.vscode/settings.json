@@ -1,0 +1,7 @@
+{
+    "git.ignoreLimitWarning": true,
+    "python.pythonPath": "test/bin/python3",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 100,
+    "editor.wordWrap": "on"
+}

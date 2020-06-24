@@ -16,7 +16,7 @@ class Book(models.Model):
         ('1',"Free"),
         ("2","Unknown"),
     )
-
+    
     Title = models.CharField(max_length=256,unique=True)
 
     Status = models.CharField(max_length=128,choices=status,null=True)
