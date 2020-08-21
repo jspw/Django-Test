@@ -12,6 +12,7 @@ class Varsity (models.Model):
     def __str__(self):
         return self.name
 
+
 class Department (models.Model):
     name = models.CharField(max_length=100)
     seats = models.IntegerField()

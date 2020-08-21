@@ -81,3 +81,6 @@ My learing app is hosted here : [Practise App](http://jspw.pythonanywhere.com/) 
 
 - In `OneToOneField()` and `Foreignkey()`  : `on_delete=models.CASCADE` field is required!
 - use `from django.contrib.auth.views import LoginView`  insted of `from django.contrib.auth import views` and use `LoginView.as_view()` in the urlpattern insted of 'views.login'
+
+#### Note : Baler update and you can get error :
+- [use-pathlib-in-your-django-project](https://adamj.eu/tech/2020/03/16/use-pathlib-in-your-django-project/)

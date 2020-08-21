@@ -3,6 +3,6 @@ pillow
 django-crispy-forms
 bcrypt
 argon2-cffi
-djnagorestframework
+djangorestframework
 markdown
 filters
