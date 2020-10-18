@@ -6,8 +6,9 @@ During the Postgres installation, an operating system user named postgres was cr
 
 - `sudo su -postgres`
 
-- Log into a Postgres session by typing: `psql`
+- `sudo -u postgres psql`       
 - Create Database `CREATE DATABASE myproject;`
+- connect to database : `\c myproject`
 - Find port : `sudo netstat -plunt |grep postgres`
 
 
